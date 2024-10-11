@@ -12,15 +12,15 @@
     <div class="container">
         <h1>Local Score Migrator</h1>
         <h4>By Konomi</h4>
-        <p class="subtitle"><i>Transfer local scores between different versions of an osu map. Ideal for when only metdata is changed, like when a map is loved.</i></p>
+        <p class="subtitle"><i>Transfer local scores between different versions of an osu map. Ideal for when only metadata is changed, like when a map is loved.</i></p>
 
-        <!-- Input for Old Folder -->
+        <!-- Input for Old files -->
         <div class="file-input">
             <label for="oldFolder">Upload old .osu files:</label>
             <input type="file" id="oldFolder" accept=".osu" multiple>
         </div>
 
-        <!-- Input for New Folder -->
+        <!-- Input for New files -->
         <div class="file-input">
             <label for="newFolder">Upload new .osu files:</label>
             <input type="file" id="newFolder" accept=".osu" multiple>
@@ -41,7 +41,7 @@
             <input type="file" id="scoresDb" accept=".db">
         </div>
 
-        <!-- Button to apply hash table and scores.db -->
+        <!-- Button to apply hash table to scores.db -->
         <button id="applyHashTable" disabled>Apply Hash Substitution</button>
         
         <!-- Output display area -->
