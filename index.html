@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Local Score Migrator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Local Score Migrator</h1>
+        <h4>By Konomi</h4>
+        <p class="subtitle"><i>Transfer local scores between different versions of an osu map. Ideal for when only metdata is changed, like when a map is loved.</i></p>
+
+        <!-- Input for Old Folder -->
+        <div class="file-input">
+            <label for="oldFolder">Upload old .osu files:</label>
+            <input type="file" id="oldFolder" accept=".osu" multiple>
+        </div>
+
+        <!-- Input for New Folder -->
+        <div class="file-input">
+            <label for="newFolder">Upload new .osu files:</label>
+            <input type="file" id="newFolder" accept=".osu" multiple>
+        </div>
+
+        <!-- Button to generate hash table -->
+        <button id="generateHashTable" disabled>Generate Hash Table</button>
+
+        <!-- Text area to display and edit the hash substitution table -->
+        <div class="text-input">
+            <label for="hashTable">Hash Substitution Table:</label>
+            <textarea id="hashTable"></textarea>
+        </div>
+
+        <!-- Input for scores.db -->
+        <div class="file-input">
+            <label for="scoresDb">Upload scores.db file:</label>
+            <input type="file" id="scoresDb" accept=".db">
+        </div>
+
+        <!-- Button to apply hash table and scores.db -->
+        <button id="applyHashTable" disabled>Apply Hash Substitution</button>
+        
+        <!-- Output display area -->
+        <pre id="output"></pre>
+    </div>
+
+    <noscript>
+        <div class="alert alert-warning">JavaScript is required for this application to function properly.</div>
+    </noscript>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="score.js"></script>
+    <script src="buffer.js"></script>
+    <script src="parse.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
